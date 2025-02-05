@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    #header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 50px;
+      padding: 10px;
+      gap: 15px;
+    }
+    #header img {
+      width:25px;
+      height:25px;
+      display: block; /* Ensures visibility */
+    }
+    #content-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    #google-icon {
+      margin-bottom: 20px;
+      width: 272px;
+    }
+    .search-box {
+      width: 500px;
+      padding: 10px;
+      border: 1px solid #dfe1e5;
+      border-radius: 24px;
+      outline: none;
+      font-size: 16px;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background-color: #f8f9fa;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .buttons button:hover {
+      background-color: #e8e8e8;
+    }
+  </style>
+</head>
+<body>
+<div id="header">
+  <div>Gmail</div>
+  <div>Images</div>
+  <img id="lab-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAMAAABlApw1AAAAYFBMVEX///9fY2hzd3vr6+zDxMabnqGUl5qusLNwdHjc3d6Dhoq3ubuPkpXf4OF6fYKChYnMzc9kaG2eoKOJjJCoqq1qbnPy8vPNz9Do6eqpq67W19i5u735+fm/wcOytLeipaeoJGmGAAAE3ElEQVR4nO2c6ZbiIBBGg3GLW7tG29b2/d+yD+04DQhCsVV5Tt2/g5mPziUhbE3DMAzDMAzDMAzDMAzDMHEMx1MRwXQ8wU5+ZxyT/s4KO7tkFZ9fiB12+qaZpOQXAt+iBIEkC+z8TVT7/WOKnb8ZvHsFRmkVGGPnb65pFRhi52+aj/e+Ac37v8jevyvxQA0X8+/ocAWw4QpgwxXAhiuADVcAG64ANlwBbLgC2HAFsOEKYPPuFeiVfBtbgY1SoK+dLoBOyXewFVCHgbva6QIYKvmsY84zpQCBIdEnPpV81iFDdQiS2JjcL2q+D1uBm1JgVDtdAOootXXiaO6rITIHJd+XrcDZ18pxWSvxxNJWQn3OinXtfF7UqaaBvYj6HCXXCNqNP53azDdt3Xxe1Ieoyw9tTvyzbj4fSzXb9GIvdFLvkr2doKHNk21dpbQpWRLzew/UboQQR1exs1aMUHei1abrHc8gyUwrR6cd67P13+6C+p0i8yjVY60cTfiXBUWJdIHE9VVZvRUQkUgXyLMG66YVJiGRLpD7EXTHuF0EJDIS3Xzl9foSkEgX6ONVC7b9AF0imECSk74yBFkiQ6B9yG/0JVLIEoEFkugLjFAlggskoSORIVBwF5+MRFECSYhIZAh0Dv/l8qD9EkmiWIEkXxQk0gWahQskISBRvEASfIkMgcCjtegSGQLBL6B/21SXKE0gyVIbZKktUapAkrl2icoSgb7CXCBKlC6QpEOTKIdAkm8sibIIJNnhSJRHIEmnX6mSRIZALwbi/KBIlE0gCYJEhkCJc+56j6KGRDkFaoy5wSoS5RTocn7aiVlcIl2gTYJA3ffiYMYvL1Eugc5b18anwhJlEegy3DnSF5coh0CniWcLdUGJDIHmEZc43TaO3DUk0gWK2MvcT2zttppEhkDwmep54ObjQhKlCrQO3vdaSKI0gdptaHxRSCJdoANQoCtsw2sBiQyBrGuynHQLR1AXBSRKEOgy8T46n8gukdGJhqwYC2+8KpklMgQCDMSdII1XIbNExuEL4Y/Qr+iDM7JKZAgUOhnWnF/12nxklKg136Bht7ffJ8TPKtHT6R1BkxnrpIN7REaJTIGCvuT7myUSkEwSPQkUcuVh6p9fkkkiy/EvviUFbeKRMQ+ySPQskPdbMv7ZaZJBIotA4vWc6npm+0UcGSRyyOB8E3SJZ1YZJEtkE0hi3ackP3mzxhfJEtkFkthWRrSf8G6nj0SJXj1NzB7p8Zat7aokSeQS6M64+9vPdtyGjDdEkSCRW6AHg93+Nt6tioX//T/iJcr0OkolWqLXAlUkUiK/QLWIlIiIQJIoicgIJImQiI5AkgiJIgcTSuHcWOTi7L9mXaBj4dCxwOIAbwGpFnwHdguSjrAsA+gW9P7rVQd0MubSf736QFbWHrHD2oA0gsRzaMsAGdJPPA27DJCleSTvAKQ/RLINQBY2dP7L1QdyoEyLHdYC6IzwC3ZaC7AF8nnHB7MAW9pArjctDsAzlTKOMOfBu03WgNybALo6rCf1SRxzCsXaf9GKDCJOFSPVH4paXkhoYAu2uOc/ZD7soxc4E2kHMcs7/7Ek8DqYJZ3j02/zz3qBGCSfSNdPEN8Isytsj6yD435UeBbpmcNqN9rTOwqNYRiGYRiGYRiGYRiGocIP8xA87Y4eQHUAAAAASUVORK5CYII=" alt="Search Labs Icon">
+  <img id="app-icon" src="https://www.google.com/images/icons/material/system/2x/apps_black_24dp.png" alt="Google Apps Icon">
+</div>
+<div id="content-body">
+  <img id="google-icon" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Image">
+  <input type="text" class="search-box" placeholder="Search Google or type a URL">
+  <div class="buttons">
+    <button>Google Search</button>
+    <button>I'm Feeling Lucky</button>
+  </div>
+</div>
+</body>
+</html>
