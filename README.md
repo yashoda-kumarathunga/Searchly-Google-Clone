@@ -1,5 +1,5 @@
 
-# Google-clone
+# Searchly (Google-clone)
 
 ### Contributor
 - Yashoda
